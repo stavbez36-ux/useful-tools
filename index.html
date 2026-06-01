@@ -2,196 +2,176 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Полезные программы и сервисы</title>
+<title>Полезные сервисы</title>
+
 <style>
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     margin: 0;
-    background: #f5f5f5;
-    line-height: 1.6;
+    background: #f5f6fa;
 }
 
 header {
-    background: #0066cc;
+    background: linear-gradient(90deg, #4b6cb7, #182848);
     color: white;
-    padding: 30px 20px;
+    padding: 30px;
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
-}
-
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
     padding: 20px;
 }
 
-.category {
-    margin-top: 40px;
-}
-
-.category h2 {
-    color: #333;
-    border-bottom: 2px solid #0066cc;
-    padding-bottom: 5px;
+#searchInput {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin: 20px 0;
 }
 
 .card {
     background: white;
-    padding: 15px 20px;
+    padding: 15px;
     margin: 15px 0;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.card img {
+    width: 45px;
+    height: 45px;
+    float: left;
+    margin-right: 15px;
 }
 
 .card h3 {
-    margin-top: 0;
+    margin: 0;
 }
 
-.card a {
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.free { background: #d4edda; color: #155724; }
+.partial { background: #fff3cd; color: #856404; }
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #4b6cb7;
+    color: white;
     text-decoration: none;
-    color: #0066cc;
+    border-radius: 6px;
 }
 
-.card a:hover {
-    text-decoration: underline;
-}
 </style>
 </head>
+
 <body>
 
 <header>
-    <h1>Полезные программы и сервисы</h1>
-    <p>Каталог онлайн-сервисов для работы, обучения и повседневной жизни</p>
+    <h1>Полезные сервисы</h1>
+    <p>Каталог инструментов для работы и обучения</p>
 </header>
 
 <div class="container">
-<input
-type="text"
-id="searchInput"
-placeholder="Поиск сервиса..."
-onkeyup="searchServices()"
-style="
-width:100%;
-padding:12px;
-font-size:16px;
-border-radius:8px;
-border:1px solid #ccc;
-margin-bottom:20px;
-box-sizing:border-box;
-">
+
+<input type="text" id="searchInput" placeholder="Поиск..." onkeyup="searchServices()">
+
+<!-- СЕРВИСЫ -->
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg">
+<h3>ChatGPT</h3>
+<p>Нейросеть для текста и идей.</p>
+<span class="badge free">Бесплатно / Частично</span><br>
+<a class="btn" href="https://chat.openai.com" target="_blank">Перейти</a>
 </div>
 
-  <div class="container">
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg">
+<h3>Figma</h3>
+<p>Дизайн интерфейсов онлайн.</p>
+<span class="badge partial">Частично бесплатно</span><br>
+<a class="btn" href="https://figma.com" target="_blank">Перейти</a>
+</div>
 
-    <div class="category">
-        <h2>ИИ и нейросети</h2>
-        <div class="card">
-            <h3><a href="https://chatgpt.com" target="_blank">ChatGPT</a></h3>
-            <p>Нейросеть для работы с текстами, поиска идей и обучения.</p>
-        </div>
-        <div class="card">
-            <h3><a href="https://www.deepl.com" target="_blank">DeepL</a></h3>
-            <p>Один из самых качественных переводчиков.</p>
-        </div>
-    </div>
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Notion_app_logo.png">
+<h3>Notion</h3>
+<p>Заметки и организация задач.</p>
+<span class="badge free">Бесплатно</span><br>
+<a class="btn" href="https://notion.so" target="_blank">Перейти</a>
+</div>
 
-    <div class="category">
-        <h2>Работа с текстом</h2>
-        <div class="card">
-            <h3><a href="https://www.grammarly.com" target="_blank">Grammarly</a></h3>
-            <p>Проверка грамматики и улучшение английских текстов.</p>
-        </div>
-        <div class="card">
-            <h3><a href="https://docs.google.com" target="_blank">Google Docs</a></h3>
-            <p>Онлайн-редактор документов с совместной работой.</p>
-        </div>
-        <div class="card">
-            <h3><a href="https://sheets.google.com" target="_blank">Google Sheets</a></h3>
-            <p>Таблицы для учёта, расчётов и анализа данных.</p>
-        </div>
-        <div class="card">
-            <h3><a href="https://www.notion.so" target="_blank">Notion</a></h3>
-            <p>Заметки, проекты и организация информации в одном месте.</p>
-        </div>
-    </div>
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Google_Drive_icon_%282020%29.svg">
+<h3>Google Drive</h3>
+<p>Облачное хранение файлов.</p>
+<span class="badge free">Бесплатно</span><br>
+<a class="btn" href="https://drive.google.com" target="_blank">Перейти</a>
+</div>
 
-    <div class="category">
-        <h2>Дизайн и изображения</h2>
-        <div class="card">
-            <h3><a href="https://www.canva.com" target="_blank">Canva</a></h3>
-            <p>Создание изображений, презентаций и дизайна онлайн.</p>
-        </div>
-        <div class="card">
-            <h3><a href="https://www.figma.com" target="_blank">Figma</a></h3>
-            <p>Дизайн интерфейсов и совместная работа над проектами.</p>
-        </div>
-        <div class="card">
-            <h3><a href="https://www.remove.bg" target="_blank">Remove.bg</a></h3>
-            <p>Автоматическое удаление фона с изображений.</p>
-        </div>
-        <div class="card">
-            <h3><a href="https://tinypng.com" target="_blank">TinyPNG</a></h3>
-            <p>Сжатие изображений без заметной потери качества.</p>
-        </div>
-        <div class="card">
-            <h3><a href="https://www.photopea.com" target="_blank">Photopea</a></h3>
-            <p>Бесплатный онлайн-аналог Photoshop.</p>
-        </div>
-    </div>
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Trello_logo.svg">
+<h3>Trello</h3>
+<p>Управление задачами.</p>
+<span class="badge free">Бесплатно</span><br>
+<a class="btn" href="https://trello.com" target="_blank">Перейти</a>
+</div>
 
-    <div class="category">
-        <h2>Продуктивность и организация</h2>
-        <div class="card">
-            <h3><a href="https://trello.com" target="_blank">Trello</a></h3>
-            <p>Управление задачами и проектами через доски.</p>
-        </div>
-        <div class="card">
-            <h3><a href="https://todoist.com" target="_blank">Todoist</a></h3>
-            <p>Планировщик задач на каждый день.</p>
-        </div>
-        <div class="card">
-            <h3><a href="https://obsidian.md" target="_blank">Obsidian</a></h3>
-            <p>Система заметок и хранения личной базы знаний.</p>
-        </div>
-    </div>
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png">
+<h3>Google Docs</h3>
+<p>Документы онлайн.</p>
+<span class="badge free">Бесплатно</span><br>
+<a class="btn" href="https://docs.google.com" target="_blank">Перейти</a>
+</div>
 
-    <div class="category">
-        <h2>Видеосвязь</h2>
-        <div class="card">
-            <h3><a href="https://zoom.us" target="_blank">Zoom</a></h3>
-            <p>Видеоконференции и онлайн-встречи.</p>
-        </div>
-        <div class="card">
-            <h3><a href="https://meet.google.com" target="_blank">Google Meet</a></h3>
-            <p>Сервис видеосвязи от Google.</p>
-        </div>
-    </div>
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Grammarly_Logo.svg">
+<h3>Grammarly</h3>
+<p>Проверка текста.</p>
+<span class="badge partial">Частично бесплатно</span><br>
+<a class="btn" href="https://grammarly.com" target="_blank">Перейти</a>
+</div>
 
-    <div class="category">
-        <h2>Облачные сервисы</h2>
-        <div class="card">
-            <h3><a href="https://www.dropbox.com" target="_blank">Dropbox</a></h3>
-            <p>Облачное хранение файлов.</p>
-        </div>
-        <div class="card">
-            <h3><a href="https://drive.google.com" target="_blank">Google Drive</a></h3>
-            <p>Хранение и обмен документами в облаке.</p>
-        </div>
-        <div class="card">
-            <h3><a href="https://github.com" target="_blank">GitHub</a></h3>
-            <p>Хранение кода и совместная разработка проектов.</p>
-        </div>
-        <div class="card">
-            <h3><a href="https://pages.github.com" target="_blank">GitHub Pages</a></h3>
-            <p>Бесплатный хостинг для простых сайтов.</p>
-        </div>
-    </div>
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Obsidian_logo.svg">
+<h3>Obsidian</h3>
+<p>Система заметок.</p>
+<span class="badge free">Бесплатно</span><br>
+<a class="btn" href="https://obsidian.md" target="_blank">Перейти</a>
+</div>
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Zoom_Communications_Logo.svg">
+<h3>Zoom</h3>
+<p>Видеозвонки.</p>
+<span class="badge free">Бесплатно / Частично</span><br>
+<a class="btn" href="https://zoom.us" target="_blank">Перейти</a>
+</div>
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Meet_icon_%282020%29.svg">
+<h3>Google Meet</h3>
+<p>Видео встречи.</p>
+<span class="badge free">Бесплатно</span><br>
+<a class="btn" href="https://meet.google.com" target="_blank">Перейти</a>
+</div>
 
 </div>
+
 <script>
 function searchServices() {
     let input = document.getElementById("searchInput");
@@ -200,15 +180,11 @@ function searchServices() {
 
     for (let i = 0; i < cards.length; i++) {
         let text = cards[i].innerText.toLowerCase();
-
-        if (text.indexOf(filter) > -1) {
-            cards[i].style.display = "";
-        } else {
-            cards[i].style.display = "none";
-        }
+        cards[i].style.display = text.includes(filter) ? "" : "none";
     }
 }
 </script>
+
 </body>
 </html>
 
